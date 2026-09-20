@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Dados e artefatos locais
+*.db
+work/
+.pytest_cache/
+
+# Editor e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

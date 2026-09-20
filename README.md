@@ -92,7 +92,7 @@ Tópicos MQTT:
 
 ## Equipe
 
-- Pedro: backend, dashboard e visualização 3D
+- Pedro: backend, dashboard 
 - Rogerio: firmware e Wokwi
 - João Victor: documentação
 - Professor responsável: Omar Sacilotto Donaires

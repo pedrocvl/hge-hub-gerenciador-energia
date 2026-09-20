@@ -1,0 +1,323 @@
+{
+  "version": 1,
+  "author": "Equipe HGE",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp32",
+      "top": 5,
+      "left": 8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -125,
+      "left": -250,
+      "attrs": {
+        "value": "300"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele1",
+      "top": -140,
+      "left": 280,
+      "attrs": {
+        "transistor": "npn"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -148,
+      "left": 465,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -74,
+      "left": 457,
+      "attrs": {
+        "color": "yellow",
+        "label": "Iluminação"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 15,
+      "left": -250,
+      "attrs": {
+        "value": "700"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele2",
+      "top": 0,
+      "left": 280,
+      "attrs": {
+        "transistor": "npn"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -8,
+      "left": 465,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 66,
+      "left": 457,
+      "attrs": {
+        "color": "cyan",
+        "label": "Climatização"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": 155,
+      "left": -250,
+      "attrs": {
+        "value": "200"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele3",
+      "top": 140,
+      "left": 280,
+      "attrs": {
+        "transistor": "npn"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 132,
+      "left": 465,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 206,
+      "left": 457,
+      "attrs": {
+        "color": "white",
+        "label": "Tomadas"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp32:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp32:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "pot1:VCC",
+      "esp32:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot1:GND",
+      "esp32:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot1:SIG",
+      "esp32:34",
+      "orange",
+      []
+    ],
+    [
+      "rele1:VCC",
+      "esp32:5V",
+      "red",
+      []
+    ],
+    [
+      "rele1:GND",
+      "esp32:GND.2",
+      "black",
+      []
+    ],
+    [
+      "rele1:IN",
+      "esp32:25",
+      "green",
+      []
+    ],
+    [
+      "rele1:COM",
+      "esp32:3V3",
+      "red",
+      []
+    ],
+    [
+      "rele1:NO",
+      "r1:1",
+      "green",
+      []
+    ],
+    [
+      "r1:2",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "esp32:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot2:VCC",
+      "esp32:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot2:GND",
+      "esp32:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot2:SIG",
+      "esp32:35",
+      "orange",
+      []
+    ],
+    [
+      "rele2:VCC",
+      "esp32:5V",
+      "red",
+      []
+    ],
+    [
+      "rele2:GND",
+      "esp32:GND.2",
+      "black",
+      []
+    ],
+    [
+      "rele2:IN",
+      "esp32:26",
+      "green",
+      []
+    ],
+    [
+      "rele2:COM",
+      "esp32:3V3",
+      "red",
+      []
+    ],
+    [
+      "rele2:NO",
+      "r2:1",
+      "green",
+      []
+    ],
+    [
+      "r2:2",
+      "led2:A",
+      "green",
+      []
+    ],
+    [
+      "led2:C",
+      "esp32:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot3:VCC",
+      "esp32:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot3:GND",
+      "esp32:GND.1",
+      "black",
+      []
+    ],
+    [
+      "pot3:SIG",
+      "esp32:32",
+      "orange",
+      []
+    ],
+    [
+      "rele3:VCC",
+      "esp32:5V",
+      "red",
+      []
+    ],
+    [
+      "rele3:GND",
+      "esp32:GND.2",
+      "black",
+      []
+    ],
+    [
+      "rele3:IN",
+      "esp32:27",
+      "green",
+      []
+    ],
+    [
+      "rele3:COM",
+      "esp32:3V3",
+      "red",
+      []
+    ],
+    [
+      "rele3:NO",
+      "r3:1",
+      "green",
+      []
+    ],
+    [
+      "r3:2",
+      "led3:A",
+      "green",
+      []
+    ],
+    [
+      "led3:C",
+      "esp32:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

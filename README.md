@@ -90,11 +90,3 @@ Tópicos MQTT:
 - `hge/estacio-rp/telemetria`: telemetria do ESP32 para o backend;
 - `hge/estacio-rp/comando/<n>`: comandos `ON` ou `OFF` enviados ao circuito.
 
-## Equipe
-
-- Pedro: backend, dashboard 
-- Rogerio: firmware e Wokwi
-- João Victor: documentação
-- Professor responsável: Omar Sacilotto Donaires
-
-Instituições parceiras do cenário de uso: CEU — Centro de Artes e Esportes Unificados, em Sertãozinho, e Centro Cultural Palace, em Ribeirão Preto.
